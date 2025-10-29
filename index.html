@@ -36,15 +36,23 @@
     <!-- Header & Navigation -->
     <header class="bg-dark-card shadow-lg sticky top-0 z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- UPDATED: Changed text-primary-500 to text-white for better contrast -->
-            <img src="CasaDeMarks-512x512.png" alt="Faith-Work-Growth" width="100" height="100" style="vertical-align:middle">
-            <a href="#" class="text-2xl font-bold text-white hover:text-primary-500 transition-colors rounded-lg p-1">
-               Casa de Marks
+            <!-- Logo and Name with Placeholder -->
+            <a href="#" class="flex items-center space-x-2 text-2xl font-bold text-white hover:text-primary-500 transition-colors rounded-lg p-1">
+                <!-- Logo Placeholder: w-8 h-8 (32x32px) for header alignment. -->
+                <img src="CasaDeMarks-512x512.png" alt="Faith-Work-Growth" width="100" height="100" style="vertical-align:middle">
+                <!-- <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12a.75.75 0 110-1.5.75.75 0 010 1.5zM12 17.25a.75.75 0 110-1.5.75.75 0 010 1.5z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 7.5a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 7.5v9a2.25 2.25 0 002.25 2.25h9A2.25 2.25 0 0019.5 16.5v-9z"></path>
+                </svg> 
+                -->
+                <span>Casa de Marks</span>
             </a>
             <nav class="hidden md:flex space-x-6">
-                <a href="#focus-areas" class="text-gray-300 hover:text-white transition-colors rounded-lg p-2">Our Focus</a>
-                <a href="#mission" class="text-gray-300 hover:text-white transition-colors rounded-lg p-2">The Mission</a>
-                <a href="#contact" class="text-gray-300 hover:text-white transition-colors rounded-lg p-2">Connect</a>
+                <!-- Link to new #mission section -->
+                <a href="#focus-areas" onclick="smoothScroll(event, 'focus-areas')" class="text-gray-300 hover:text-white transition-colors rounded-lg p-2">Our Focus</a>
+                <a href="#mission" onclick="smoothScroll(event, 'mission')" class="text-gray-300 hover:text-white transition-colors rounded-lg p-2">Our Mission</a>
+                <!-- Link to renamed #cta section -->
+                <a href="#contact" onclick="smoothScroll(event, 'cta')" class="text-gray-300 hover:text-white transition-colors rounded-lg p-2">Connect</a>
             </nav>
             <button class="md:hidden p-2 rounded-lg hover:bg-gray-600 transition-colors">
                 <!-- Hamburger Icon (Inline SVG for single file) -->
@@ -63,7 +71,8 @@
                 <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
                     Welcome to Casa de Marks—your guide to intentional living, deeper faith, and acquiring practical tools for meaningful personal development.
                 </p>
-                <a href="#mission" class="inline-block bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition-colors transform hover:scale-105 duration-300 focus:outline-none focus:ring-4 focus:ring-primary-500 focus:ring-opacity-50">
+                <!-- Button updated to link to the new #mission section -->
+                <a href="#mission" onclick="smoothScroll(event, 'mission')" class="inline-block bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition-colors transform hover:scale-105 duration-300 focus:outline-none focus:ring-4 focus:ring-primary-500 focus:ring-opacity-50">
                     Begin the Journey
                 </a>
             </div>
@@ -106,15 +115,36 @@
                 </a>
             </div>
         </section>
+        
+        <!-- NEW MISSION SECTION (Light Gray Background with Indigo Text) -->
+        <section id="mission" class="bg-gray-100 py-16 sm:py-24 mb-20">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-800">
+                <h2 class="text-4xl sm:text-5xl font-extrabold mb-6 text-gray-900">
+                    Our Foundational <span class="text-primary-500">Mission</span>
+                </h2>
+                <p class="text-xl sm:text-2xl font-semibold max-w-3xl mx-auto leading-relaxed">
+                    Casa de Marks is dedicated to forming joyful disciples by equipping individuals and families with the <strong>spiritual disciplines</strong> and <strong>practical tools</strong> required to live out their unique **vocation** with intentionality and grace. Rooted in the rich tradition of the Catholic Faith, we strive to transform daily routine into a profound journey of discipleship, spiritual resilience, and deep meaning.
+                </p>
+                <!-- Optional: Adding a small visual divider -->
+                <div class="h-1 w-20 bg-primary-500 mx-auto mt-8 rounded"></div>
+            </div>
+        </section>
 
-        <!-- Mission/Callout Section (A strong call-to-action banner) -->
-        <section id="mission" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Callout/CTA Section (RENAMED FROM #mission TO #cta) -->
+        <section id="cta" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-primary-600 p-8 sm:p-12 rounded-2xl text-center shadow-2xl">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Ready to Live Intentionally?</h2>
+                
+                <!-- Title is now static, without hover logic -->
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+                    Ready to Live Intentionally?
+                </h2>
+                
+                <!-- Standard CTA Text -->
                 <p class="text-lg text-primary-200 mb-8 max-w-xl mx-auto">
                     Every journey starts with a single step. Join the Casa de Marks community and transform your daily routine into a path of purpose and faith.
                 </p>
-                <a href="#contact" class="inline-block bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-xl transition-colors shadow-lg transform hover:scale-105 duration-300 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50">
+                
+                <a href="#contact" onclick="smoothScroll(event, 'contact')" class="inline-block bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-xl transition-colors shadow-lg transform hover:scale-105 duration-300 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50">
                     Connect With Us
                 </a>
             </div>
@@ -133,6 +163,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript for Smooth Scrolling -->
+    <script>
+        function smoothScroll(event, targetId) {
+            // Prevents the default anchor jump behavior
+            event.preventDefault(); 
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                // Smoothly scrolls to the element, accounting for the fixed header height (approx 70px)
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70, 
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
 
 </body>
 </html>
