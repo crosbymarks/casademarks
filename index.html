@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de Marks - Faith, Tools, and Growth</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for custom colors and font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    // Custom colors for the dark theme
+                    colors: {
+                        'primary-500': '#4f46e5', // A deep indigo for accents
+                        'primary-600': '#4338ca',
+                        'dark-bg': '#1f2937', // Dark gray for the body background
+                        'dark-card': '#374151', // Slightly lighter gray for cards/header
+                    },
+                    fontFamily: {
+                        // Using the 'Inter' font (default for Tailwind)
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ensuring smooth transitions for hover effects */
+        .transition-colors { transition-property: background-color, border-color, color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+    </style>
+</head>
+<body class="bg-dark-bg text-gray-100 min-h-screen font-sans">
+
+    <!-- Header & Navigation -->
+    <header class="bg-dark-card shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- UPDATED: Changed text-primary-500 to text-white for better contrast -->
+            <a href="#" class="text-2xl font-bold text-white hover:text-primary-500 transition-colors rounded-lg p-1">
+                Casa de Marks
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#focus-areas" class="text-gray-300 hover:text-white transition-colors rounded-lg p-2">Our Focus</a>
+                <a href="#mission" class="text-gray-300 hover:text-white transition-colors rounded-lg p-2">The Mission</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition-colors rounded-lg p-2">Connect</a>
+            </nav>
+            <button class="md:hidden p-2 rounded-lg hover:bg-gray-600 transition-colors">
+                <!-- Hamburger Icon (Inline SVG for single file) -->
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="py-12 sm:py-20">
+        <!-- Hero Section (The main headline area) -->
+        <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                    A Space for Faith, <span class="text-primary-500">Growth, and Discovery</span>.
+                </h1>
+                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Welcome to Casa de Marks—your guide to intentional living, deeper faith, and acquiring practical tools for meaningful personal development.
+                </p>
+                <a href="#mission" class="inline-block bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition-colors transform hover:scale-105 duration-300 focus:outline-none focus:ring-4 focus:ring-primary-500 focus:ring-opacity-50">
+                    Begin the Journey
+                </a>
+            </div>
+        </section>
+
+        <!-- Focus Areas Section (3-column layout on desktop) -->
+        <section id="focus-areas" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Focus Areas</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Focus Area 1: Faith Discovery (Link updated to iglesia.casademarks.com) -->
+                <a href="https://iglesia.casademarks.com" class="block bg-dark-card p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 hover:border-primary-500 border border-transparent">
+                    <div class="text-primary-500 mb-4">
+                        <!-- Icon: Heart (for Faith) -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.933 0-3.516 1.124-4.326 2.766C11.514 5.374 9.93 4.5 8.001 4.5c-2.588 0-4.688 2.015-4.688 4.5 0 2.21 1.459 4.195 3.5 5.562C10.533 17.025 12 21 12 21s1.467-3.975 5.187-6.938c2.041-1.367 3.5-3.352 3.5-5.562z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Faith Discovery</h3>
+                    <p class="text-gray-400">Explore deep theological insights, daily devotionals, and resources designed to strengthen your spiritual foundation.</p>
+                </a>
+
+                <!-- Focus Area 2: Life Tools (Link updated to life.casademarks.com) -->
+                <a href="https://life.casademarks.com" class="block bg-dark-card p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 hover:border-primary-500 border border-transparent">
+                    <div class="text-primary-500 mb-4">
+                        <!-- Icon: Cog/Gear (for Tools) -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.608 3.3 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Practical Life Tools</h3>
+                    <p class="text-gray-400">Access curated guides, templates, and systems for organization, productivity, and managing a purposeful life.</p>
+                </a>
+
+                <!-- Focus Area 3: Personal Growth (Unchanged) -->
+                <a href="#growth-page" class="block bg-dark-card p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 hover:border-primary-500 border border-transparent">
+                    <div class="text-primary-500 mb-4">
+                        <!-- Icon: Arrow Up (for Growth) -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Intentional Personal Growth</h3>
+                    <p class="text-gray-400">Find actionable steps, motivational articles, and frameworks to maximize your potential and achieve lasting change.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Mission/Callout Section (A strong call-to-action banner) -->
+        <section id="mission" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-primary-600 p-8 sm:p-12 rounded-2xl text-center shadow-2xl">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Ready to Live Intentionally?</h2>
+                <p class="text-lg text-primary-200 mb-8 max-w-xl mx-auto">
+                    Every journey starts with a single step. Join the Casa de Marks community and transform your daily routine into a path of purpose and faith.
+                </p>
+                <a href="#contact" class="inline-block bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-xl transition-colors shadow-lg transform hover:scale-105 duration-300 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50">
+                    Connect With Us
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark-card mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 Casa de Marks. All rights reserved.</p>
+            <div class="mt-2 space-x-4 text-sm">
+                <a href="#" class="hover:text-primary-500 transition-colors">About Casa de Marks</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="hover:text-primary-500 transition-colors">Resources</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
